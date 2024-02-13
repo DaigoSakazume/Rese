@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\MypageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,11 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', [ShopController::class, 'index']);
-Route::get('/login', [AuthController::class, 'login']);
-Route::get('/register', [AuthController::class, 'register']);
+Route::get('/', [ShopController::class, 'index'])
+    ->middleware('auth');
+    Route::get('/mypage', [MypageController::class, 'mypage']);
+Route::get('/done', [MypageController::class, 'done']);
+Route::get('/register', [AuthController::class, 'getRegister']);
+Route::post('/register', [AuthController::class, 'postRegister']);
+Route::get('/login', [AuthController::class, 'getLogin']);
+Route::post('/login', [AuthController::class, 'postLogin']);

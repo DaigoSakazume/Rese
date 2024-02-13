@@ -2,17 +2,49 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function login()
+
+    public function getRegister()
     {
-        return view('login');
+        return view('auth.register');
     }
 
-    public function register()
+    public function postRegister(RegisterRequest $request)
     {
-        return view('register');
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return view('thanks');
+    }
+
+    public function getLogin()
+    {
+        return view('auth.login');
+    }
+
+    public function postLogin(LoginRequest $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect('/mypage');
+        }
+
+        return back()->withErrors([
+            'email' => 'メールアドレスかパスワードが間違っています',
+        ]);
+
     }
 }
