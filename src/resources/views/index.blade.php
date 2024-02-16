@@ -22,7 +22,7 @@
 <main>
     <div class="login_form">
         <div class="form_title">
-            <p>Login</p>
+            <p>ショップ一覧</p>
         </div>
         <form class="form" action="/login" method="post">
             @csrf

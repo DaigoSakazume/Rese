@@ -16,11 +16,12 @@ use App\Http\Controllers\MypageController;
 |
 */
 
-Route::get('/', [ShopController::class, 'index'])
-    ->middleware('auth');
-    Route::get('/mypage', [MypageController::class, 'mypage']);
+Route::middleware('auth')->group(function () {
+    Route::get('/', [ShopController::class, 'index']);
+});
+Route::get('/mypage', [MypageController::class, 'mypage']);
 Route::get('/done', [MypageController::class, 'done']);
 Route::get('/register', [AuthController::class, 'getRegister']);
 Route::post('/register', [AuthController::class, 'postRegister']);
-Route::get('/login', [AuthController::class, 'getLogin']);
+Route::get('/login', [AuthController::class, 'getLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'postLogin']);
