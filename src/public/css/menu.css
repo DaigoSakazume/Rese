@@ -1,0 +1,54 @@
+.header {
+    margin: 30px 0px 0px 70px;
+}
+
+.header_icon {
+    color: #FFFFFF;
+    background-color: rgb(0, 102, 255);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgb(127, 127, 127);
+    margin-left: 5vw;
+}
+
+.header_icon p {
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+.menu {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-top: 9vw;
+    color: rgb(0, 0, 255);
+    text-align: center;
+    font-size: 1.7vw;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 255);
+    font-weight: bold;
+    padding-bottom: 1.5vw;
+}
+
+.logout {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+form {
+    font-weight: bold;
+}

@@ -1,0 +1,217 @@
+.header {
+    margin: 0 auto;
+    width: 83vw;
+    height: 7vw;
+    padding-top: 2.5vw;
+}
+
+.header_main {
+    display: flex;
+    float: left;
+}
+
+.header_icon {
+    font-size: 0.4vw;
+    line-height: 1em;
+    color: #FFFFFF;
+    background-color: rgb(0, 102, 255);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgb(127, 127, 127);
+    font-weight: bold;
+}
+
+.header_icon p {
+    padding-top: 6px;
+    padding-left: 5px;
+}
+
+.header__title {
+    font-size: 0.9vw;
+    padding: 0;
+    color: rgb(0, 102, 255);
+    margin-left: 1.2vw;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 83vw;
+    height: 7vw;
+    padding-top: 1.5vw;
+}
+
+.shop-details {
+    width: 43%;
+}
+
+.shop_header {
+    display: flex;
+    margin-bottom: 1vw;
+}
+
+.back_icon{
+    padding-top: 0.5vw
+}
+
+.back_icon a {
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgb(127, 127, 127);
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.shop_title {
+    font-size: 1.1vw;
+    color: black;
+    margin-left: 1.2vw;
+}
+
+h2 {
+    margin: 0;
+}
+
+.shop-image{
+    padding-top: 0.5vw;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.shop-info{
+    padding-top: 1vw;
+}
+
+.tag {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tag p {
+    font-size: 0.9vw;
+    margin-right: 0.5vw;
+    margin-bottom: 0;
+}
+
+.description{
+    padding-top: 1vw;
+    font-size: 0.9vw;
+    line-height: 1.5em;
+}
+
+.reservation{
+    width: 43%;
+    height: 42vw;
+    margin-top: -6vw;
+    background-color: rgb(0, 102, 255);
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px rgb(127, 127, 127);
+    position: relative;
+}
+
+.reservation_detail p{
+    font-size: 1.2vw;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.reservation_detail{
+    margin: 1.8vw;
+}
+
+.date{
+    width: 9vw;
+    border-radius: 5px;
+    border: none;
+    height: 1.5vw;
+}
+
+.time,
+.number {
+    margin-top: 0.5vw;
+    position: relative;
+}
+
+.time::before,
+.number::before {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    border-style: solid;
+    border-width: 7px 7px 0 7px;
+    border-color: rgb(192, 190, 190) transparent transparent transparent;
+    position: absolute;
+    top: 68%;
+    right: 6%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.number_input,
+.time_input {
+    margin-top: 0.5vw;
+    padding-left: 0.5vw;
+    border-radius: 5px;
+    border: none;
+    width: 95%;
+    height: 1.5vw;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.confirm{
+    width: 90%;
+    background-color: rgb(69, 122, 255);
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+    margin-top: 1vw;
+    padding: 1vw 1vw;
+}
+
+th{
+    padding-top: 0.1vw;
+    padding-bottom: 0.2vw;
+}
+
+td{
+    padding-left: 3.5vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.2vw;
+}
+
+.reservation_button{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.reservation_button-submit{
+    width: 100%;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    height: 20%;
+    font-size: 1.2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}

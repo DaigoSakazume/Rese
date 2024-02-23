@@ -20,7 +20,17 @@
     </div>
 </header>
 <main>
-    <p>マイページ</p>
+    <div class="name">
+        <p>{{ auth()->user()->name }}さん</p>
+    </div>
+    <div class="content">
+        <div class="reservation">
+            <p>予約状況</p>
+        </div>
+        <div class="like">
+            <p>お気に入り店舗</p>
+        </div>
+    </div>
 </main>
 <footer>
 </footer>

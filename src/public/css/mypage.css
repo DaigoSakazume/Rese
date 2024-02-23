@@ -36,34 +36,28 @@ body {
     background-color: rgba(235, 234, 234, 0.757);
 }
 
-.thanks {
-    width: 30vw;
+.name {
     margin: 0 auto;
-    background-color: #FFFFFF;
-    margin-top: 50px;
-    box-shadow: 1px 1px 4px rgb(127, 127, 127);
-    border-radius: 5px;
-}
-
-.message {
-    padding-top: 4vw;
+    color:black;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    font-weight: bold;
 }
 
-.login__button {
-    text-align: center;
-    padding-top: 1vw;
-    padding-bottom: 6vw;
+.content{
+    display: flexbox;
+    float: left;
+    justify-content: space-between;
 }
 
-.login__button-submit {
-    width: 7vw;
-    height: 2vw;
-    border-radius: 5px;
-    border: none;
-    background: rgb(0, 102, 255);
-    color: #FFFFFF;
-    cursor: pointer;
-    font-size: 0.9vw;
+.reservation{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.like{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
 }

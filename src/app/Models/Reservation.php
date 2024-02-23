@@ -11,7 +11,16 @@ class Reservation extends Model
     protected $fillable = [
         'shop_id',
         'user_id',
-        'num_of_users',
-        'start_at',
+        'date',
+        'time',
+        'number',
     ];
+
+    public function users() {
+        return $this->belongsTo('App\Models\User');
+    }
+
+    public function shops() {
+        return $this->belongsTo('App\Models\Shop');
+    }
 }

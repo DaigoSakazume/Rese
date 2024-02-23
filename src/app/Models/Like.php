@@ -12,4 +12,12 @@ class Like extends Model
         'shop_id',
         'user_id',
     ];
+
+    public function users() {
+        return $this->belongsTo('App\Models\User');
+    }
+
+    public function shops() {
+        return $this->belongsTo('App\Models\Shop');
+    }
 }

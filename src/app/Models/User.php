@@ -14,4 +14,12 @@ class User extends Model implements AuthenticatableContract
         'email',
         'password'
     ];
+
+    public function reservation(){
+        return $this->hasMany('App\Models\Reservation');
+    }
+
+    public function likes() {
+        return $this->hasMany('App\Models\Like');
+    }
 }
