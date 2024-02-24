@@ -1,6 +1,6 @@
 # Rese
 勤怠管理アプリ
-![Rese_top.png](Rese_top.png)
+![Rese_top.png](/Rese_top.png)
 
 ## 作成した目的
 外部の飲食店予約サービスは手数料を取られるので自社で予約サービスを持ちたい。
@@ -21,10 +21,10 @@ http://localhost/
 - MySQL 8.0
 
 ## テーブル設計
-![Rese_table.png](Rese_table.png)
+![Rese_table.png](/Rese_table.png)
 
 ## ER図
-![Rese_ER.png](Rese_ER.png)
+![Rese_ER.png](/Rese_ER.png)
 
 ## 環境構築
 1. docker-compose exec php bash
