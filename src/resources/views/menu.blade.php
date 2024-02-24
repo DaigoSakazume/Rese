@@ -13,7 +13,7 @@
 <body>
 <header class="header">
     <div class="header_icon">
-        <p>×</p>
+        <a href="/"><p>×</p></a>
     </div>
 </header>
 <main>

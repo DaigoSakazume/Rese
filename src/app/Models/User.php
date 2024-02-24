@@ -19,7 +19,7 @@ class User extends Model implements AuthenticatableContract
         return $this->hasMany('App\Models\Reservation');
     }
 
-    public function likes() {
+    public function like() {
         return $this->hasMany('App\Models\Like');
     }
 }

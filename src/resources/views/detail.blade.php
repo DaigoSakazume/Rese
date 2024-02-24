@@ -53,6 +53,11 @@
                 <div class="reservation_detail">
                     <p>予約</p>
                     <input class="date" type="date" name="date">
+                    <div class="form__error">
+                        @error('date')
+                        {{ $message }}
+                        @enderror
+                    </div>
                     <div class="time">
                         <select class="time_input" name="time">
                             <option value="">時間を選択</option>
@@ -71,6 +76,11 @@
                             <option value="21:00">21:00</option>
                             <option value="22:00">22:00</option>
                         </select>
+                        <div class="form__error">
+                            @error('time')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                     <div class="number">
                         <select class="number_input" name="number">
@@ -80,6 +90,11 @@
                             <option value="3">3人</option>
                             <option value="4">4人</option>
                         </select>
+                        <div class="form__error">
+                            @error('number')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                     <div class="confirm">
                         <table>

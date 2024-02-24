@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReservationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -44,10 +45,16 @@ class ShopController extends Controller
         return view('detail', compact('shop', 'user'));
     }
 
-    public function reserve(Request $request)
+    public function reserve(ReservationRequest $request)
     {
         $reservation = $request->all();
         Reservation::create($reservation);
         return view('done');
+    }
+
+    public function delete(Request $request)
+    {
+        Reservation::find($request->id)->delete();
+        return back();
     }
 }

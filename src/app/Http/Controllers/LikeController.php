@@ -27,7 +27,11 @@ class LikeController extends Controller
     {
         $user = Auth::user()->id;
         $like = Like::where('shop_id', $shop->id)->where('user_id', $user)->first();
-        $like->delete();
+
+        if ($like) {
+            $like->delete();
+        }
+
         return back();
     }
 }

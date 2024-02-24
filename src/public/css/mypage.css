@@ -17,6 +17,11 @@
     font-weight: bold;
 }
 
+.header_icon a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .header_icon p {
     padding-top: 4px;
     padding-left: 5px;
@@ -45,19 +50,195 @@ body {
 }
 
 .content{
-    display: flexbox;
-    float: left;
-    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    width: 83vw;
+    justify-content: flex-start;
 }
 
 .reservation{
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
+    width: 35%;
+    margin-left: 3%;
+    margin-right: 7%;
 }
 
-.like{
-    width: 100px;
-    height: 100px;
-    border: 1px solid red;
+.content_title p{
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.reservation_header{
+    display: flex;
+    color: #FFFFFF;
+    padding-left: 6vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    font-size: 1.1vw;
+    width: 100%;
+    position: relative;
+}
+
+.reservation_header p{
+    width: 85%;
+}
+
+.delete{
+    float: right;
+    border: none;
+    width: 1.8vw;
+    height: 1.8vw;
+    background-color: transparent;
+    cursor: pointer;
+    background: url(../img/delete.svg) no-repeat;
+    margin-top: 0.8vw;
+}
+
+.reservation_header::before {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 2vw;
+    background: url(../img/clock.svg) no-repeat;
+    background-size: cover;
+    width: 1.7vw;
+    height: 1.7vw;
+    transform: translateY(-50%);
+}
+
+.my_reservation {
+    width: 100%;
+    background-color: rgb(0, 102, 255);
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px rgb(127, 127, 127);
+    font-size: 1vw;
+    color: #FFFFFF;
+    margin-bottom: 1vw;
+    padding-bottom: 1.5vw;
+}
+
+th {
+    text-align: left;
+    padding-bottom: 0.7vw;
+    padding-left: 2vw;
+}
+
+td {
+    padding-left: 3vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.7vw;
+}
+
+.like {
+    width: 55%;
+}
+
+.my_favorite {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.shop {
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px rgb(127, 127, 127);
+    font-size: 32px;
+    width: 47%;
+    height: 19vw;
+    margin-bottom: 1.5vw;
+}
+
+img {
+    width: 100%;
+    height: 10vw;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    object-fit: cover;
+}
+
+.shop_info {
+    margin-left: 1.2vw;
+}
+
+.shop_name p {
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin-top: 1.2vw;
+    margin-bottom: 0;
+}
+
+.tag {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tag p {
+    font-size: 0.8vw;
+    margin-top: 0.1vw;
+    margin-right: 0.7vw;
+    margin-bottom: 0;
+}
+
+.shop_info--bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1vw;
+}
+
+.more button {
+    background-color: rgb(0, 102, 255);
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 0.3vw 1vw;
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+
+.heart,
+.hearted {
+    width: 2.5vw;
+    height: 2.5vw;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 1vw;
+    padding-top: 1vw;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 50%;
+    height: 80%;
+    background: gainsboro;
+    border-radius: 25px 25px 0 0;
+    display: block;
+    position: absolute;
+    top: 5px;
+}
+
+.hearted::before,
+.hearted::after {
+    content: "";
+    width: 50%;
+    height: 80%;
+    background: red;
+    border-radius: 25px 25px 0 0;
+    display: block;
+    position: absolute;
+    top: 5px;
+}
+
+.heart::before,
+.hearted::before {
+    transform: rotate(-45deg);
+    left: 14%;
+}
+
+.heart::after,
+.hearted::after {
+    transform: rotate(45deg);
+    right: 14%;
 }

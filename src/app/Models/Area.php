@@ -12,7 +12,7 @@ class Area extends Model
         'name',
     ];
 
-    public function shops(){
+    public function shop(){
         return $this->hasMany('App\Models\Shop');
     }
 }

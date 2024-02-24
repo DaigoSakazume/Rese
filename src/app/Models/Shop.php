@@ -28,7 +28,7 @@ class Shop extends Model
         return $this->belongsTo('App\Models\Genre', 'genre_id');
     }
 
-    public function likes(){
+    public function like(){
         return $this->hasMany('App\Models\Like');
     }
 

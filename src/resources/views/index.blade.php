@@ -15,7 +15,7 @@
     <div class="header">
         <div class="header_main">
             <div class="header_icon">
-                <p>━━<br>━━━━<br>━</p>
+                <a href="/menu"><p>━━<br>━━━━<br>━</p></a>
             </div>
             <div class="header__title">
                 <h1>Rese</h1>
@@ -67,6 +67,9 @@
                             <button class="more_button" type="submit">詳しくみる</button>
                         </div>
                     </form>
+                    @php
+                    $like = $shop->like()->where('user_id', Auth::id())->exists();
+                    @endphp
                     @if($like)
                         <a href="{{ route('deleteLike', $shop) }}"><button class="hearted"></button></a>
                     @else

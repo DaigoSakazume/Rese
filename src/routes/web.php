@@ -33,4 +33,5 @@ Route::get('/like/delete/{shop}', [LikeController::class, 'deleteLike'])->name('
 Route::get('/search', [ShopController::class, 'search']);
 Route::get('/detail/{id}', [ShopController::class, 'detail']);
 Route::post('/reservation', [ShopController::class, 'reserve']);
+Route::post('/reservation/delete', [ShopController::class, 'delete']);
 Route::get('/done', [ShopController::class, 'done']);

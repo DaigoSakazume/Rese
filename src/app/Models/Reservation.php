@@ -16,11 +16,11 @@ class Reservation extends Model
         'number',
     ];
 
-    public function users() {
+    public function user() {
         return $this->belongsTo('App\Models\User');
     }
 
-    public function shops() {
+    public function shop() {
         return $this->belongsTo('App\Models\Shop');
     }
 }
