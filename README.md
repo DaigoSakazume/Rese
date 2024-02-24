@@ -21,7 +21,7 @@ http://localhost/
 - MySQL 8.0
 
 ## テーブル設計
-![Rese_table.png](Rese.table.png)
+![Rese.table.png](Rese.table.png)
 
 ## ER図
 ![Rese_ER.png](Rese.ER.png)
